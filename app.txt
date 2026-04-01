@@ -13,7 +13,7 @@ import pytz
 
 import base64
 
-st.set_page_config(page_title="Sistema Escolar - CCMCEMR by Leandro Malheiros V2.0.3 ", layout="centered")
+st.set_page_config(page_title="Sistema Escolar - CCMFV by Leandro Malheiros V2.0.3 ", layout="centered")
 
 # --- Estilização Visual ---
 st.markdown("""
@@ -65,7 +65,7 @@ def agora_local():
 # --- Conexão com MongoDB ---
 @st.cache_resource
 def conectar():
-    uri = "mongodb+srv://lsouzamalheiros_db_user:malheiros76@cluster0.10ycbss.mongodb.net/"
+    uri = "mongodb+srv://lsouzamalheiros_db_user:malheiros76@cluster0.uwsboas.mongodb.net/"
     cliente = MongoClient(uri)
     return cliente["escola"]
 
@@ -141,8 +141,8 @@ def formatar_mensagem_whatsapp(ocorrencias, nome):
 
     msg += """
 
-👨‍🏫 Escola [CCM Manuel Ribas]
-📞 Contato: [42 3623-4640]
+👨‍🏫 Escola [CCM Francisco Villanueva]
+📞 Contato: [43 3256-1825]
 
 Este relatório foi gerado automaticamente pelo Sistema de Ocorrências."""
     return msg
@@ -270,7 +270,7 @@ def exportar_ocorrencias_para_pdf(ocorrencias, nome_arquivo):
 
     # ===== CABEÇALHO =====
     elementos.append(Paragraph(
-        "<b>COLÉGIO CÍVICO MILITAR MANUEL RIBAS</b>",
+        "<b>COLÉGIO CÍVICO MILITAR FRANCISCO VILLANUEVA</b>",
         cabecalho_style
     ))
 
