@@ -404,7 +404,7 @@ def pagina_cadastro():
 
     # ================= LIMPAR =================
     if limpar:
-        st.experimental_rerun()
+        st.rerun()
 
     # ================= IMPORTAÇÃO =================
     st.markdown("---")
